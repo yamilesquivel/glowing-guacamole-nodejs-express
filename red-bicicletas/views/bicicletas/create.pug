@@ -1,0 +1,24 @@
+include ../layout
+block content
+
+h1 plantalla de &quot;create&quot; de bicicletas 
+
+  
+br
+br
+br
+br
+form(action='bicicletas/create'  method='post')
+label(for='id') Id:
+input#id(type='text' name='id')
+br
+label(for='color') color:
+input#id(type='text' name='color')
+br
+label(for='modelo') modelo:
+input#id(type='text' name='modelo')
+br
+label(for='lat') latitud:
+input#id(type='text' name='lat')
+br
+input#btn-submit(type='submit' value='Enviar')
