@@ -10,6 +10,7 @@ exports.bicicleta_create_get = function(req,res){
 	res.render('bicicletas/create');
 }
 
+
 exports.bicicleta_create_post = function(req,res){
 
 	var bici = new Bicicleta(req.body.id, req.body.color, req.body.modelo);
@@ -21,8 +22,18 @@ exports.bicicleta_create_post = function(req,res){
 	res.redirect('/bicicletas');
 }
 
+exports.bicicleta_update_get = function(req,res){
+
+	var = Bicicleta.findById(req.params.id);
+
+	res.render('bicicletas/update',{bicis});
+}
+
+
+
 exports.bicicleta_delete_post = function(req,res){
 	Bicicleta.removeById(req.body.id);
 
 	res.redirect('/bicicletas');
 }
+
