@@ -1,6 +1,6 @@
 include ../layout
 block content
-	a(href='./create') nueva bicicleta
+	a(href='bicicletas/create') Nueva bicicleta
 	
 table.table
 	thead
@@ -9,7 +9,7 @@ table.table
 			th(scope='col') color
 			th(scope='col') modelo
 			th(scope='col') ubicacion
-			th(scope='col') status
+			th(scope='col') 
 	tbody
 	each bici in bicis
 		tr
@@ -17,4 +17,7 @@ table.table
 			td= bici.color
 			td= bici.modelo
 			td= bici.ubicacion
-br
+			td
+				form.inline(method="post" action="bicicletas/" + bici.id +"/delete")
+					input(type="hidden" name="id" value="bici.id")
+					button.link-button(type="submit" name="submit-param" value="submit_value" class="btn")= "Eliminar" 

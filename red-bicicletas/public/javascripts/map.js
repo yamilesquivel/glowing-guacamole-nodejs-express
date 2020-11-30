@@ -23,10 +23,10 @@ L.tileLayer(urlmap2 ,{attribution: 'Map data &copy; <a href="http://openstreetma
 
 
 var marker1 = L.marker([-34.625957,-58.380890]).addTo(mymap);
-marker1.bindPopup("marker1");
+marker1.bindPopup("marker from folder js public");
 
 var marker2 = L.marker([-34.625967,-58.385990]).addTo(mymap); 
-marker2.bindPopup("marker2");
+marker2.bindPopup("marker from folder js public");
 /*
 
 var map = L.map("mapid");
