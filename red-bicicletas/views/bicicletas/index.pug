@@ -18,8 +18,8 @@ table.table
 			td= bici.modelo
 			td= bici.ubicacion
 			td
-				a(href='bicicletas/'+ bici.id +'/update') Edsitar
+				a(href='bicicletas/'+ bici.id +'/update')= 'Editar'
 			td
 				form.inline(method="post" action="bicicletas/" + bici.id +"/delete")
-					input(type="hidden" name="id" value="bici.id")
+					input(type="hidden" name="id" value= bici.id)
 					button.link-button(type="submit" name="submit-param" value="submit_value" class="btn")= "Eliminar" 

@@ -1,0 +1,28 @@
+include ../layout
+block content
+
+h1 Plantalla de update de bicicletas del negocio 
+a(href='/bicicletas') volver pagina anterior
+  
+br
+br
+br
+br
+form(action='/bicicletas/${bici.id}/update'  method='post')
+	label(for='id') Id:
+	input#id(type='text' name='id' value= bici.id)
+	br
+	label(for='color') color:
+	input#color(type='text' name='color' value= bici.color)
+	br
+	label(for='modelo') modelo:
+	input#modelo(type='text' name='modelo' value= bici.modelo)
+	br
+	label(for='lat') latitud:
+	input#lat(type='text' name='lat' value= bici.ubicacion[0])
+	br
+	label(for='lng') longitud:
+	input#lng(type='text' name='lng' value= bici.ubicacion[1])
+	br
+	br
+	input#btn-submit(type='submit' value='Enviar')
