@@ -1,4 +1,5 @@
-    ### glowing-guacamole-nodejs-expres
+### para hacer andar el programa ejecutar :
+      npm start
 Proyecto realizado como partede curso realizado en la plataforma de coursera
 
 Información básica	
@@ -165,4 +166,4 @@ En este módulo pondrás en producción tu proyecto y verás más temas de segur
 Calificado: Calificado del Módulo 4
 Calificado: Evaluación del proyecto - Módulo 4
 
-*recordar ingresar a la carpeta de red-bicicletas para ejecutar npm start
+
