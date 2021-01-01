@@ -1,3 +1,7 @@
+/*
+*https://github.com/yamilesquivel
+*
+*/
 
 const urlmap = "https://cdn.lima-labs.com/{z}/{x}/{y}.png?free";
 const urlmap2 = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
