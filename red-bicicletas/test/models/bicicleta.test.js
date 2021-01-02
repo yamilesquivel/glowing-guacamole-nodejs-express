@@ -10,14 +10,14 @@ beforeEach(()=>{ //inicializar el objeto vacio que se ejecuta cada ve antes de c
 	Bicicleta.allBicis = [];
 });
 
-describe("Funcion Bicicleta.allBicis , el total de elementos",() =>{
-		it("comienza con cero elementos", () =>{
+describe("Funcion Bicicleta.allBicis  ",() =>{
+		it(" el total de elementos comienza con cero elementos", () =>{
 				expect(Bicicleta.allBicis.length).toBe(0);
 			});
 		});
 
 describe("Funcion Bicicleta.add ",() =>{
-		it("agregamos una bicicleta ", () =>{
+		it("agrega una bicicleta a la lista de bicicletas ", () =>{
 			expect(Bicicleta.allBicis.length).toBe(0);
 			var a=new Bicicleta(1, 'rojo', 'urbana', [-34.6012424,-58.3861467]);
 			Bicicleta.add(a);
@@ -28,7 +28,7 @@ describe("Funcion Bicicleta.add ",() =>{
 		});
 
 describe(" Funcion Bicicleta.findById ",() =>{
-		it(" debe devolver la bici con el ID", () =>{
+		it(" encuentra la bici por el ID y devolver la bici con el ID", () =>{
 			
 			expect(Bicicleta.allBicis.length).toBe(0);
 			var Bici1=new Bicicleta(1, 'rojo', 'urbana', [-34.6012424,-58.3861467]);
@@ -41,5 +41,21 @@ describe(" Funcion Bicicleta.findById ",() =>{
 			expect(buscadorBici.id).toBe(1);
 			expect(buscadorBici.color).toBe(Bici1.color);
 			expect(buscadorBici.modelo).toBe(Bici1.modelo);
+			});
+		});
+describe(" Funcion Bicicleta.removeById ",() =>{
+		it(" borra la bicicleta por el ID", () =>{
+			
+			expect(Bicicleta.allBicis.length).toBe(0);
+			var Bici1=new Bicicleta(1, 'rojo', 'urbana', [-34.6012424,-58.3861467]);
+			var Bici2=new Bicicleta(2, 'verde', 'rural', [-34.6013424,-58.3862467]);
+			
+			Bicicleta.add(Bici1);
+			Bicicleta.add(Bici2);
+
+			var removedorBici= Bicicleta.removeById(1);
+			
+			expect(Bicicleta.allBicis[0]).toBe(Bici2);
+			
 			});
 		});
