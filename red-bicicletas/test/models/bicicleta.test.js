@@ -6,7 +6,11 @@
 
 var Bicicleta = require("/home/yamil/pro_des_per/glowing-guacamole-nodejs-express/red-bicicletas/models/bicicleta.js");
 
+afterAll(()=>{ 
+	console.log("prueba terminada")});
+
 beforeEach(()=>{ //inicializar el objeto vacio que se ejecuta cada ve antes de cada test
+	
 	Bicicleta.allBicis = [];
 });
 
@@ -43,6 +47,7 @@ describe(" Funcion Bicicleta.findById ",() =>{
 			expect(buscadorBici.modelo).toBe(Bici1.modelo);
 			});
 		});
+
 describe(" Funcion Bicicleta.removeById ",() =>{
 		it(" borra la bicicleta por el ID", () =>{
 			
